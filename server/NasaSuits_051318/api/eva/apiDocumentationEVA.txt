@@ -1,0 +1,12 @@
+Kyle Vasulka 3/3/2018 NASA SUITS kjv13@zips.uakron.edu
+
+at time of creating this document IP address = 130.101.94.171
+--get request
+
+ipaddress/nasasuits/api/eva/GetEVA.php //will return list of eva's
+
+ipaddress/nasasuits/api/eva/GetEVA.php?eva_id=1 //will return all iau's and directions table assosiated with an eva
+
+param eva_id = 1
+
+

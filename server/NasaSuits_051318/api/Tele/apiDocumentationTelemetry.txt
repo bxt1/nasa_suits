@@ -1,0 +1,71 @@
+Kyle Vasulka 2/19/2018 NASA SUITS kjv13@zips.uakron.edu
+
+at time of creating this document IP address = 130.101.94.171
+--get request 
+
+ipaddress/nasasuits/api/tele/GetTele.php             //will default to the first case listed below with respsize = 5 and ast_username = cesl
+
+
+
+param:     //will return most recent 5 values for username cesl(or less if less exists)
+RespSize = 5
+ast_username = "cesl"
+
+call:
+ipaddress/nasasuits/api/tele/GetTele.php?RespSize=5&ast_username="cesl"
+
+
+
+
+
+param:     //will returns all datapoints within past number of minutes for user
+WithinPastMinutes = 55
+ast_username = "cesl"
+
+call:
+ipaddress/nasasuits/api/tele/GetTele.php?WithinPastMinutes=55&ast_username="cesl"
+
+
+
+
+param:     //will return all datapoints within specified time frame Between(StartTime and EndTime)
+StartTime = "2018-02-19 17:51:01" 
+EndTime = "2018-02-19 18:31:15"
+
+optional param:     //with ast_username will return only for specified user, without will specify all users in certain time.
+ast_username = "cesl"
+
+call:
+ipaddress/nasasuits/api/tele/GetTele.php?StartTime="2018-02-19 17:51:01"&EndTime="2018-02-19 18:31:15"
+or
+ipaddress/nasasuits/api/tele/GetTele.php?StartTime="2018-02-19%2017:51:01"&EndTime="2018-02-19%2021:31:15"
+ipaddress/nasasuits/api/tele/GetTele.php?StartTime="2018-02-19 17:51:01"&EndTime="2018-02-19 18:31:15"&ast_username="cesl"
+
+
+
+
+
+
+--post request
+ipaddress/nasasuits/api/tele/PostTele.php
+
+example parameters in post body
+
+internal_suit_pressure:3.25
+time_life_battery:"09:03:27"
+time_life_oxygen:"08:24:43"
+time_life_water:"08:25:52"
+sub_pressure:2.56
+sub_temp:12
+fan_tachometer:34827
+extravehicular_activity_time:"02:34:23"
+oxygen_pressure:840
+oxygen_rate:0.76
+battery_capacity:26.74
+h2o_gas_pressure:14.667
+h2o_liquid_pressure:15.333
+sop_pressure:793
+sop_rate:0.656
+time_entered:"2018-02-18 17:54:54" // parameter is optional, server time is used instead
+tele_id:4
+ast_username:"cesl"

@@ -1,0 +1,2 @@
+In STORAGE, locate the DISCONNECT and reinstall it into the FUSIBLE DISCONNECT box.
+CAUTION: The DISCONNECT must read ¡°ON¡± in the upper right corner to restore conductivity.
